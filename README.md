@@ -19,11 +19,12 @@ The apartment building is very tall, and the basement is very deep; he will neve
 
 For example:
 
-(()) and ()() both result in floor 0.
-((( and (()(()( both result in floor 3.
-))((((( also results in floor 3.
-()) and ))( both result in floor -1 (the first basement level).
-))) and )())()) both result in floor -3.
+- (()) and ()() both result in floor 0.
+- ((( and (()(()( both result in floor 3.
+- ))((((( also results in floor 3.
+- ()) and ))( both result in floor -1 (the first basement level).
+- ))) and )())()) both result in floor -3.
+
 To what floor do the instructions take Santa?
 
 --- Part Two ---
@@ -44,8 +45,9 @@ Fortunately, every present is a box (a perfect right rectangular prism), which m
 
 For example:
 
-A present with dimensions 2x3x4 requires 2 * 6 + 2 * 12 + 2 * 8 = 52 square feet of wrapping paper plus 6 square feet of slack, for a total of 58 square feet.
-A present with dimensions 1x1x10 requires 2 * 1 + 2 * 10 + 2 * 10 = 42 square feet of wrapping paper plus 1 square foot of slack, for a total of 43 square feet.
+- A present with dimensions 2x3x4 requires 2 * 6 + 2 * 12 + 2 * 8 = 52 square feet of wrapping paper plus 6 square feet of slack, for a total of 58 square feet.
+- A present with dimensions 1x1x10 requires 2 * 1 + 2 * 10 + 2 * 10 = 42 square feet of wrapping paper plus 1 square foot of slack, for a total of 43 square feet.
+
 All numbers in the elves' list are in feet. How many total square feet of wrapping paper should they order?
 
 --- Part Two ---
@@ -56,6 +58,21 @@ The ribbon required to wrap a present is the shortest distance around its sides,
 
 For example:
 
-A present with dimensions 2x3x4 requires 2+2+3+3 = 10 feet of ribbon to wrap the present plus 2 * 3 * 4 = 24 feet of ribbon for the bow, for a total of 34 feet.
-A present with dimensions 1x1x10 requires 1+1+1+1 = 4 feet of ribbon to wrap the present plus 1 * 1 * 10 = 10 feet of ribbon for the bow, for a total of 14 feet.
+- A present with dimensions 2x3x4 requires 2+2+3+3 = 10 feet of ribbon to wrap the present plus 2 * 3 * 4 = 24 feet of ribbon for the bow, for a total of 34 feet.
+- A present with dimensions 1x1x10 requires 1+1+1+1 = 4 feet of ribbon to wrap the present plus 1 * 1 * 10 = 10 feet of ribbon for the bow, for a total of 14 feet.
+
 How many total feet of ribbon should they order?
+
+##Day 3 - Perfectly Spherical Houses in a Vacuum
+
+Santa is delivering presents to an infinite two-dimensional grid of houses.
+
+He begins by delivering a present to the house at his starting location, and then an elf at the North Pole calls him via radio and tells him where to move next. Moves are always exactly one house to the north (^), south (v), east (>), or west (<). After each move, he delivers another present to the house at his new location.
+
+However, the elf back at the north pole has had a little too much eggnog, and so his directions are a little off, and Santa ends up visiting some houses more than once. How many houses receive at least one present?
+
+For example:
+
+- > delivers presents to 2 houses: one at the starting location, and one to the east.
+- ^>v< delivers presents to 4 houses in a square, including twice to the house at his starting/ending location.
+- ^v^v^v^v^v delivers a bunch of presents to some very lucky children at only 2 houses.
