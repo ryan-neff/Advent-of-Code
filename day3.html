@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advent of Code - Day 3</title>
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var positions = ["0,0"];
+			var currentX = 0;
+			var currentY = 0;
+			var input = "^v^v^v^v^v";
+			var uniqueHouses = 1;
+
+			// Loop through the given string of directions
+			for(var i = 0; i < input.length; i++) {
+
+				// Parsing the string and counting the number of times each direction appears
+				switch (input[i]) {
+					case "^":
+						currentY++;
+						break;
+					case ">":
+						currentX++;
+						break;
+					case "v":
+						currentY--;
+						break;
+					case "<":
+						currentX--;
+						break;
+					default:
+						break;
+				};
+
+				// Checking the current X and Y positions of Santa against the positions array to look for unique houses
+				if(positions.indexOf(`${currentX},${currentY}`) == -1) uniqueHouses++;
+
+				// Adding the current X and Y positions of Santa to the 2D array
+				positions.push(`${currentX},${currentY}`);
+
+				// ------------------------------------------------ Part 2 ---------------------------------------------------- //
+
+			};
+
+			// Question 1: How many unique hosues did Santa visit?
+			console.log(`Unique houses: ${uniqueHouses}`);
+			$('#1').html(`Question 1: Santa has visited ${uniqueHouses} unique houses`);
+		});
+	</script>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		p {
+			text-align: center;
+			font-size: 25px;
+			font-family: 'Helvetica';
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<p>Question source: <a href = 'http://adventofcode.com/day/3'>http://adventofcode.com/day/3</a></p>
+	<p>All logic can be found in the source code on this page.</p>
+	<p id = "1"></p>
+	<p id = "2"></p>
+</body>
+</html>
